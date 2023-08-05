@@ -21,3 +21,33 @@ if astronvim.default_colorscheme then
 end
 
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
+
+require('neo-tree').setup {
+  filesystem = {
+    filtered_items = {
+      visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+      hide_dotfiles = false,
+      hide_gitignored = false,
+    },
+  }
+}
+
+require('telescope').setup{ 
+  defaults = { 
+    file_ignore_patterns = { 
+      "node_modules",
+      ".git",
+      ".idea",
+      "coverage",
+      ".yarn"
+    }
+  }
+}
+
+require'lspconfig'.solidity_ls_nomicfoundation.setup{}
+
+require'lspconfig'.tailwindcss.setup{}
+
+require('hologram').setup{
+    auto_display = true -- WIP automatic markdown image display, may be prone to breaking
+}
