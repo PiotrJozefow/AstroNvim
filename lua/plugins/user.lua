@@ -5,7 +5,9 @@ return {
   lazy = false,
   init = function()
 		vim.g.VM_maps = { 
-                    ["Find Under"] = "<C-d>"
+                    ["Find Under"] = "<C-d>",
+                    ["Add Cursor Down"] = "<C-j>",
+                    ["Add Cursor Up"] = "<C-k>",
                 }
 	end,
 }
