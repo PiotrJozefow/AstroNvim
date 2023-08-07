@@ -29,7 +29,11 @@ require('neo-tree').setup {
       hide_dotfiles = false,
       hide_gitignored = false,
     },
-  }
+    follow_current_file = {
+      enabled = true,
+      leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+    },
+  },
 }
 
 require('telescope').setup{ 
