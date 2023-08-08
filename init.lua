@@ -55,3 +55,14 @@ require'lspconfig'.tailwindcss.setup{}
 require('hologram').setup{
     auto_display = true -- WIP automatic markdown image display, may be prone to breaking
 }
+
+require('lualine').setup {
+  options = {
+    theme = 'vscode'
+  }
+}
+
+vim.o.background = 'dark'
+require('vscode').setup({})
+require('vscode').load()
+
